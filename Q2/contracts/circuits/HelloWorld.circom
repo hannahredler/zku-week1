@@ -12,5 +12,3 @@ template Multiplier2 () {
    // Constraints.  
    c <== a * b;  
 }
-
-// component main = Multiplier2();

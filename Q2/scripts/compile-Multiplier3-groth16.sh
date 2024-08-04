@@ -13,7 +13,7 @@ else
     wget https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_10.ptau
 fi
 
-echo "Compiling Multiplier3.circom..."
+echo "Compiling Multiplier3.circom with Groth16..."
 
 # compile circuit
 
@@ -27,4 +27,4 @@ snarkjs zkey contribute Multiplier3/circuit_0000.zkey Multiplier3/circuit_final.
 snarkjs zkey export verificationkey Multiplier3/circuit_final.zkey Multiplier3/verification_key.json
 
 # generate solidity contract
-snarkjs zkey export solidityverifier Multiplier3/circuit_final.zkey ../Multiplier3Verifier.sol
+snarkjs zkey export solidityverifier Multiplier3/circuit_final.zkey ../Multiplier3Verifier_groth.sol

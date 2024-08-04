@@ -15,7 +15,7 @@ template Multiplier3 () {
    sum.b <== b;
 
    // Constraints.  
-   d <== a * sum.c;  
+   d <== c * sum.c;  
 }
 
 component main = Multiplier3();
